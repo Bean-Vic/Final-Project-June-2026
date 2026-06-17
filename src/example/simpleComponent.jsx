@@ -1,11 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// export const HelloWorld = ({ name, children }) => {
-//     name = 'Zoey';
-//     return (
-//         <h1>hello world from {name}</h1>
-//     );
-// };
+export const HelloWorld1 = ({ name }) => {
+    return (
+        <h1>hello world from {name}</h1>
+    );
+};
+
+HelloWorld1.propTypes = {
+    name: PropTypes.number.isRequired,
+};
 
 export class HelloWorld extends React.Component {
     constructor() {

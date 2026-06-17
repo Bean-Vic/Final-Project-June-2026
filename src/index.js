@@ -4,14 +4,18 @@ import 'src/sass/index.scss';
 import App from 'src/components/App';
 import { Provider } from 'react-redux';
 import store from 'src/store';
-import { HelloWorld } from 'src/example/simpleComponent';
+import { HelloWorld1 } from 'src/example/simpleComponent';
+import { ConditionalListRendering } from 'src/example/conditionalListRendering';
+import { Counter } from 'src/example/counter';
+import { Rickandmorty } from "./example/rickandmorty";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
         <Provider store={store}>
             {/* <App /> */}
-            <HelloWorld name="Alex" />
-        </Provider>
-    </React.StrictMode>,
+            {/*<HelloWorld1 name="Alex" />*/}
+            {/*<ConditionalListRendering shouldRender={true}/>*/}
+            {/*<Counter />*/}
+            <Rickandmorty />
+        </Provider>,
 );
